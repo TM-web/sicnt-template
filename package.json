@@ -1,5 +1,6 @@
 {
   "name": "sicnt-template",
+  "author": "T.Kakhramonov",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,8 +10,10 @@
     "apexcharts": "^3.36.3",
     "axios": "^1.1.3",
     "classnames": "^2.3.2",
+    "dayjs": "^1.11.6",
     "env-cmd": "^10.1.0",
     "i18next": "^22.0.6",
+    "i18next-browser-languagedetector": "^7.0.1",
     "i18next-parser": "^7.0.3",
     "lodash.get": "^4.4.2",
     "pdfjs-dist": "^3.0.279",
@@ -31,11 +34,10 @@
     "build-dev": "env-cmd -f .env.development npm run-script build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "plop": "plop"
+    "plop": "plop",
+    "i18n": "i18next 'src/**/*.{ts,tsx}' [-oc]"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
+  "eslintConfig": {},
   "browserslist": {
     "production": [
       ">0.2%",
@@ -56,6 +58,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^18.0.9",
+    "eslint": "^8.28.0",
     "prettier": "2.7.1",
     "typescript": "^4.1.2",
     "typescript-plugin-css-modules": "^3.2.0",
