@@ -85,6 +85,6 @@ $spacegaps: (
 $fw: (300, 400, 500, 600, 700, 800); // font-weights amounts.
 @each $fw in $fw {
   .fw#{$fw} {
-    font-weight: #{$fw}px;
+    font-weight: #{$fw};
   }
 }

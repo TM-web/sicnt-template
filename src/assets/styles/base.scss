@@ -10,12 +10,13 @@
 
 html,
 body {
-  font-family: "Noto Sans";
+  font-family: "Noto Sans", sans-serif;
   font-size: 14px;
   line-height: 1.6;
   background: #fff;
   color: #262626;
   width: 100%;
+  font-weight: 600;
 }
 
 [role="tooltip"] {

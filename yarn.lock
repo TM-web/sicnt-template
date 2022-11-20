@@ -3907,11 +3907,6 @@
     "path-type" "^4.0.0"
     "yaml" "^1.10.0"
 
-"cra-template-typescript-sass-modules@0.2.1":
-  "integrity" "sha512-PzAEoY/aMgYK+pYxpLIZPGyxRKXUu+MQV2FVSko9ojmDtxQ+6mqnCWXnaUz7K5MLTx8B/+y6lou0JwO60xuNcQ=="
-  "resolved" "https://registry.npmjs.org/cra-template-typescript-sass-modules/-/cra-template-typescript-sass-modules-0.2.1.tgz"
-  "version" "0.2.1"
-
 "cross-spawn@^7.0.0", "cross-spawn@^7.0.2", "cross-spawn@^7.0.3":
   "integrity" "sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w=="
   "resolved" "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.3.tgz"
