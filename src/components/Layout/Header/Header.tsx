@@ -1,84 +1,61 @@
 import React from "react";
 import classes from "./Header.module.scss";
-import {Link} from "react-router-dom";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
+import { Col, Input, Row, Select } from "antd";
+import { Link } from "react-router-dom";
+import { langOptions } from "constants/general";
 import Logo from "assets/images/svg/logo.svg";
-// import Language from "../components/Language";
-// import { useQuery } from "react-query";
 import User from "assets/images/svg/user.svg";
-import {Space, Tag} from "antd";
-// import { Input } from "../../AntComponents";
 
 export type Props = {};
 
 const Header = (props: Props) => {
-  const { t, i18n } = useTranslation();
-  // const history = useHistory();
-
-  // const getUser = useQuery(
-  //   "getUser",
-  //   () => AuthApi.get<any>("/oauth/account"),
-  //   {}
-  // );
-  // const user = getUser?.data?.data;
-
-  const roleNames: any = {
-    DEPT_CHIEF: t("Бўлим бошлиғи (ҚҚС маъмурчилиги)"),
-    DIRECTOR: t("Раҳбар"),
-    INSPECTOR: t("Масъул ходим (ҚҚС маъмурчилиги)"),
-    GNK_INSPECTOR: t("Масъул ходим (ДСҚ)"),
-    READER: t("Кўриш учун (READER)"),
-  };
-
+  const { t } = useTranslation();
+  const { Search } = Input;
   return (
     <>
       <div className={classes.header}>
         <div className="container">
-          <div className={classes["header-content"]}>
-            <Link to={"/"} className={classes.logo}>
-              <img src={Logo} alt="" />
-              <span>{t("Your Project Main Title")}</span>
-            </Link>
+          <Row gutter={[20, 20]} className={classes["header-content"]}>
+            <Col lg={7} className={"d-flex"}>
+              <Link to={"/"} className={classes.logo}>
+                <img src={Logo} alt="" />
+                <span>{t("Your Project Main Title")}</span>
+              </Link>
+            </Col>
 
-            {/*<Input*/}
-            {/*  isSearch*/}
-            {/*  placeholder={t("СТИР бўйича қидирув")}*/}
-            {/*  style={{ width: 400 }}*/}
-            {/*  type={"number"}*/}
-            {/*  onSearch={(val: string) => {*/}
-            {/*    history.push(`/company-info/${val}`);*/}
-            {/*  }}*/}
-            {/*/>*/}
+            <Col lg={6} className={"flex-center"}>
+              {/*<Search placeholder={t("СТИР") || ""} size={"large"} />*/}
+            </Col>
 
-            <Space>
-              <div className={"d-flex"}>
-                <div className={classes.user}>
-                  <img src={User} alt="avatar" width={50} height={50} />
-                  <div className={classes["user-info"]}>
-                    <p className={"mb-5"}>
-                      {"KAKHRAMONOV TEMIRIDDIN JAVLONBEK O'GLI"}
-                    </p>
-                    <i style={{ color: "#7e7e7e" }} className={"fz12"}>
-                      Инспектор ГНК
-                    </i>
-                    <Space className={"mt-5"}>
-                      <Tag>{String("gnk admin").toLowerCase()}</Tag>
-                    </Space>
-
-                    {/*<Space size={"small"}>*/}
-                    {/*  <Tag style={{ width: "fit-content" }}>*/}
-                    {/*    {(getUser.isFetched &&*/}
-                    {/*      user?.roles &&*/}
-                    {/*      roleNames[user?.roles["0"]]) ||*/}
-                    {/*      "-"}*/}
-                    {/*  </Tag>*/}
-                    {/*</Space>*/}
-                  </div>
+            <Col lg={7}>
+              <div className={classes.user}>
+                <img src={User} alt="avatar" width={55} height={55} />
+                <div className={classes["user-info"]}>
+                  <p className={"mb-5 fw500"}>
+                    {"FIRST NAME LAST NAME MIDDLE NAME"}
+                  </p>
+                  <i style={{ color: "#7e7e7e" }} className={"fz12"}>
+                    Инспектор ГНК
+                  </i>
+                  {/*<Space style={{marginTop: 8}}>*/}
+                  {/*  <Tag>{String("gnk admin").toLowerCase()}</Tag>*/}
+                  {/*</Space>*/}
                 </div>
               </div>
-              <div className={classes.lang}>{/*<Language />*/}</div>
-            </Space>
-          </div>
+            </Col>
+
+            <Col lg={3} className={"flex-end"}>
+              <Select
+                bordered={false}
+                defaultValue={"cyrl"}
+                size={"large"}
+                style={{ width: 130 }}
+                options={langOptions}
+                placement={"bottomLeft"}
+              />
+            </Col>
+          </Row>
         </div>
       </div>
     </>

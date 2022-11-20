@@ -16,9 +16,22 @@ body {
   background: #fff;
   color: #262626;
   width: 100%;
+  height: 100%;
   font-weight: 600;
   margin: 0;
   padding: 0;
+}
+
+#root,
+.App {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.page-content {
+  height: 100%;
 }
 
 [role="tooltip"] {
@@ -43,11 +56,6 @@ ul {
 
 a {
   color: $primary;
-
-  &:hover {
-    color: $primary;
-    text-decoration: underline;
-  }
 }
 
 // Main Container ----- //
@@ -146,144 +154,15 @@ a {
   text-align: right;
 }
 
-//.main-content {
-//  width: 100%;
-//  height: calc(100vh - 216px);
-//  display: flex;
-//  align-items: center;
-//}
-
 //----------- Ant Pagination -------------- //
-
-//.dsp-none {
-//  display: none !important;
-//}
-
-//.ant-pagination {
-//  display: flex;
-//  align-items: center;
-//
-//  .ant-pagination-item-active {
-//    a {
-//      color: #777b82 !important;
-//    }
-//  }
-//
-//  .ant-pagination-item {
-//    width: 50px;
-//    height: 40px;
-//    line-height: 38px;
-//    border-radius: 8px;
-//    font-size: 17px;
-//    font-weight: 500;
-//    border: 1px solid #b6bccd;
-//
-//    a {
-//      color: $primary;
-//    }
-//  }
-//
-//  .ant-pagination-prev,
-//  .ant-pagination-next {
-//    height: 40px;
-//    line-height: 40px;
-//    border-radius: 8px;
-//    border: 1px solid #cdd1dd;
-//    width: fit-content;
-//    padding: 0 15px;
-//    background: transparent;
-//
-//    a {
-//      color: $primary;
-//      font-weight: 500;
-//      font-size: 17px;
-//    }
-//
-//    &.ant-pagination-disabled {
-//      background: #f6f6f7;
-//
-//      a {
-//        color: #85898f;
-//      }
-//    }
-//  }
-//
-//  .ant-pagination-next {
-//    display: flex;
-//    align-items: center;
-//    padding-right: 5px;
-//
-//    &.ant-pagination-disabled {
-//      &:after {
-//        transform: rotate(180deg);
-//        background: url("../../assets/images/svg/disable-chevron.svg") no-repeat
-//          center center;
-//        background-size: contain !important;
-//      }
-//    }
-//
-//    &:after {
-//      content: "";
-//      display: block;
-//      width: 22px;
-//      height: 22px;
-//      background: url("../../assets/images/svg/enable-chevron.svg") no-repeat
-//        center center;
-//      background-size: contain !important;
-//      margin-left: 2px;
-//    }
-//  }
-//
-//  .ant-pagination-prev {
-//    display: flex;
-//    align-items: center;
-//    padding-left: 5px;
-//
-//    &.ant-pagination-disabled {
-//      &:before {
-//        transform: rotate(0deg);
-//        background: url("../../assets/images/svg/disable-chevron.svg") no-repeat
-//          center center;
-//        background-size: contain !important;
-//      }
-//    }
-//
-//    &:before {
-//      content: "";
-//      display: block;
-//      width: 22px;
-//      height: 22px;
-//      margin-left: 2px;
-//      background: url("../../assets/images/svg/enable-chevron.svg") no-repeat
-//        center center;
-//      transform: rotate(180deg);
-//      background-size: contain !important;
-//    }
-//  }
-//
-//  .custom-ant-next {
-//    color: red;
-//  }
-//}
 
 .c-pointer {
   cursor: pointer;
 }
 
-//.ant-table-content {
-//  border-top-left-radius: 10px;
-//  border-top-right-radius: 10px;
-//  overflow: hidden;
-//}
-
-//.ant-table-tbody > tr > td {
-//  line-height: 25px !important;
-//  //font-size: 16px;
-//}
-
 //======== Nprogress Settings ========== //
 #nprogress .bar {
-  top: 100px;
+  top: 90px !important;
 }
 
 //============ Antd Modal Style ========== //
@@ -302,61 +181,6 @@ a {
   position: relative !important;
 }
 
-//.tr-red {
-//  transition: all 0.3s ease;
-//  position: relative;
-//  z-index: 10;
-//
-//  &:hover {
-//    background: #fed5cf !important;
-//  }
-//}
-//
-//.tr-green {
-//  transition: all 0.3s ease;
-//  position: relative;
-//  z-index: 10;
-//
-//  &:hover {
-//    background: #e3f8cd !important;
-//  }
-//}
-
-//.ant-table-tbody > tr.ant-table-row:hover > td{
-//  background: transparent !important;
-//}
-
 iframe {
   display: none !important;
 }
-
-//.ant-pagination-mini .ant-pagination-item,
-//.ant-pagination-mini .ant-pagination-prev,
-//.ant-pagination-mini .ant-pagination-next {
-//  height: 40px !important;
-//  display: flex;
-//  align-items: center;
-//  justify-content: center;
-//}
-//
-//.ant-pagination-mini {
-//  li:first-child {
-//    margin-right: 10px !important;
-//  }
-//
-//  li:last-child {
-//    margin-left: 10px !important;
-//  }
-//}
-
-//.table-head-center {
-//  table {
-//    thead {
-//      tr {
-//        th {
-//          text-align: center !important;
-//        }
-//      }
-//    }
-//  }
-//}

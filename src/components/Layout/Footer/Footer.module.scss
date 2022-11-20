@@ -2,7 +2,7 @@
 
 .footer {
   padding: 20px 0;
-  border-top: 1px solid #D7D8DA;
+  border-top: 1px solid #d7d8da;
 
   .footer-content {
     display: flex;
@@ -18,16 +18,16 @@
 
   .footer-col-1 {
     p {
-      color: #777B82;
-      font-size: 14px;
+      color: #777b82;
+      font-size: 16px;
       line-height: 25px;
+      font-weight: 300;
 
       &:nth-child(2) {
         padding-right: 10px;
       }
     }
   }
-
 
   .footer-menu {
     ul {
@@ -51,9 +51,7 @@
     }
   }
 
-
   .footer-help {
-
     a {
       display: flex;
       align-items: center;
@@ -64,11 +62,7 @@
       display: block;
       padding-left: 15px;
       font-size: 18px;
-      text-decoration: underline;
-
-      &:hover {
-        color: $primary;
-      }
+      font-weight: 400;
     }
 
     .circle {
